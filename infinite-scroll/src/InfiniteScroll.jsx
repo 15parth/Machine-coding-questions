@@ -44,25 +44,21 @@ const InfiniteScroll = () => {
     // console.log(data)
 
     return (
-        <div>
-            {data?.map((item) => {
-                return (
-                   <div id={item?.id}>
-                     <div className="container" id={item?.id}>
-                        <span >this is id {item?.id }</span>
-                        <span >this is the author name {item?.author}</span>
-                        <img
-                            className="image-post"
-                            key={item.id}
-                            src={item.download_url}
-                            alt="Post"
-                        />
-                    </div>
-                    {loading && <p>Loading...</p>}
-                   </div>
-                )
-            })}
-        </div>
+        <div className="post-container">
+        {data.map((item) => (
+          <div key={item.id} className="container">
+            <span>this is id {item.id}</span>
+            <span>this is the author name {item.author}</span>
+            <img
+              className="image-post"
+              src={item.download_url}
+              alt="Post"
+            />
+          </div>
+        ))}
+        {loading && <p>Loading...</p>}
+      </div>
+      
     )
 }
 

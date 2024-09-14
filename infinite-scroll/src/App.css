@@ -1,4 +1,14 @@
-.container{
+
+.post-container .container:nth-child(odd) {
+  background-color: rgb(157, 128, 186); 
+}
+
+.post-container .container:nth-child(even) {
+  background-color: rgb(138, 215, 188); 
+}
+
+
+.container {
   margin: 10px 20px 30px;
   border: 1px solid black;
   display: flex;
@@ -12,3 +22,7 @@
   height: 100px;
   object-fit: cover;
 }
+
+
+
+
